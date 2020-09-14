@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hongdy.code.mapper.UserMapper">
+    <!--    <insert id="insert" parameterType="com.hongdy.code.dto.User" >-->
+    <!--        INSERT INTO-->
+    <!--        t_order-->
+    <!--        (id,order_id,user_id,userName,passWord)-->
+    <!--        VALUES-->
+    <!--        (#{id},#{order_id},#{user_id},#{userName}, #{passWord})-->
+    <!--    </insert>-->
+
+    <insert id="insert" parameterType="com.hongdy.code.dto.User">
+        insert into table1 (id, name)
+        values (#{id}, #{name})
+    </insert>
+
+    <select id="select" resultType="com.hongdy.code.dto.User">
+        select *
+        from table1
+        where id = #{id}
+    </select>
+</mapper>
